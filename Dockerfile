@@ -15,7 +15,7 @@ WORKDIR /app
 FROM nginx:alpine
 
 # Copy the build output to the Nginx serve directory
-COPY --from=build /app/processes-client/dist/leave-portal-v2 /usr/share/nginx/html
+COPY --from=build /app/processes-client/dist /usr/share/nginx/html
 
 EXPOSE 80
 
