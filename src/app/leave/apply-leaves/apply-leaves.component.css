@@ -1,0 +1,101 @@
+
+.card-body {
+    margin-top: 0px !important;
+}
+.apply-leave-main {
+    top: 25px;
+    padding: 17px 32px;
+    width: 90%;
+    position: relative;
+    left: 5%;
+    border: 1px solid;
+    box-shadow: 0px 0px 18px 4px;
+    border-radius: 18px;
+    background-color: #024d6b;
+    color: white;
+    max-height: 900px;
+}
+.app-leave-wrapper {
+    overflow: auto !important;
+    max-height: 450px;
+}
+.leave-error {
+    bottom: 17px !important;
+    position: relative;
+}
+.leave-details{
+    position: relative;
+    top: 10%;
+    text-align: center;
+}
+.leave-details-lebel {
+    color: #024d6b;
+}
+.submit-leave-btn{
+    margin: 0px 4% 3.5% 0px
+}
+.btn-success {
+    float: right;
+    width: 10%;
+    height: 40px;
+    border: 1px solid;
+    box-shadow: 0px 0px 18px 4px;
+    border-radius: 18px;
+    background-color: #024d6b;
+    color: white;
+}
+.btn-success:hover{
+    background-color: green;
+    color: black;
+}
+.select-box-custom{
+    width: 100%;
+    margin-top: 10px;
+    height: calc(1.75em + 1.75rem + 3px);
+}
+
+.select-box-custom .mat-mdc-text-field-wrapper .mdc-text-field .ng-tns-c1205077789-3 .mdc-text-field--filled .mdc-text-field--no-label {
+    border-radius: 6px !important;
+    color: black !important;
+    background-color: white !important;
+}
+.select-box-custom .mat-mdc-text-field-wrapper{
+    background-color: white !important;
+}
+.mat-mdc-select {
+    position: relative;
+    bottom: 6px;
+    /* background-color: white !important; */
+}
+ /* div.leave-request.row.col-md-12 > div:nth-child(1) > div:nth-child(2) > mat-form-field > div.mat-mdc-text-field-wrapper.mdc-text-field.ng-tns-c1205077789-3.mdc-text-field--filled.mdc-text-field--no-label */
+ mat-form-field > div {
+/* .mdc-text-field--filled:not(.mdc-text-field--disabled){ */
+     background-color: rgb(248, 21, 21) !important;
+}
+#mat-tab-content-0-1 > div > app-apply-leaves > div.apply-leave-main > form > div > div.leave-request.row.col-md-12 > div:nth-child(1) > div:nth-child(1) > div > mat-form-field > div.mat-mdc-text-field-wrapper.mdc-text-field.ng-tns-c1205077789-3.mdc-text-field--filled.mdc-text-field--no-label{
+    border-radius: 6px !important;
+    color: black !important;
+    background-color: white !important;
+}
+
+/* #mat-tab-content-0-1 > div > app-apply-leaves > div.apply-leave-main > form > div > div.leave-request.row.col-md-12 > div:nth-child(1) > div:nth-child(1) > div > mat-form-field > div.mat-mdc-text-field-wrapper.mdc-text-field.ng-tns-c1205077789-3.mdc-text-field--filled.mdc-text-field--no-label > div.mat-mdc-form-field-flex.ng-tns-c1205077789-3{
+    padding-top: 9px !important;
+} */
+
+/* .select-box-custom .mdc-text-field--no-label:not(.mdc-text-field--outlined):not(.mdc-text-field--textarea) .mat-mdc-form-field-infix{
+    padding-top: 9px !important;
+}
+
+.select-box-custom .mat-mdc-form-field-infix{
+    padding-top: 9px !important;
+}
+
+.mat-mdc-form-field-infix .ng-tns-c1205077789-3{
+    padding-top: 9px !important;
+}
+.select-box-custom .mat-mdc-text-field-wrapper .mdc-text-field .ng-tns-c1205077789-3 .mdc-text-field--filled .mdc-text-field--no-label > div.mat-mdc-form-field-flex.ng-tns-c1205077789-3{
+    padding-top: 9px !important;
+} */
+/* .select-box-custom .mat-mdc-text-field-wrapper .mdc-text-field .ng-tns-c1205077789-3 .mdc-text-field--filled .mdc-text-field--no-label > div.mat-mdc-form-field-flex.ng-tns-c1205077789-3{
+    padding-top: 9px !important;
+} */

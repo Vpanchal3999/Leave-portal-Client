@@ -1,0 +1,51 @@
+.body-scrl-out{
+  overflow: hidden !important;
+}
+.vh-100 {
+  overflow: hidden;
+}
+  .display-flex{
+    display: flex;
+  }
+  .form-control {
+    margin-left: 24px;
+  }
+  .fa-eye,
+  .fa-eye-slash{
+    bottom: 21.5%;
+    color: #024d6b;
+    right: 4%;
+  }
+  .fa {
+    position: absolute;
+    font-size: 25px;
+    margin-top: 14px;
+  }
+
+  .bg-dark {
+    background-color: #024d6b !important;
+
+  }
+  .frgt-link{
+    cursor: pointer;
+  }
+  .frgt-link:hover {
+    color: white !important;
+  }
+  .avatar {
+    height: 150px;
+    width: 165px;
+  }
+  .image-container{
+   background-color: #a0c4d5;
+  }
+  .forgot-change{
+    border: 1px solid;
+    box-sizing: 10px;
+  }
+
+  @media (min-width:1200px) {
+  .col-xl-5{
+    max-width : 36.666667% !important;
+  }
+  }  

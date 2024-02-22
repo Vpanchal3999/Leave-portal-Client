@@ -1,0 +1,61 @@
+<section class="vh-100 gradient-custom image-container">
+    <div id=sectionBody class="container py-5">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-12 col-md-8 col-lg-6 col-xl-4">
+                <div class="card bg-dark text-white" style="border-radius: 1rem;">
+                    <div class="card-body p-2 text-center">
+                        <!-- <div class="mb-md-5 mt-md-4 pb-5"> -->
+                        <div>
+                            <img src="./assets/V.N (1).png" alt="Avatar" class="avatar">
+                        </div>
+                        <h2 class="fw-bold mb-2 text-uppercase">{{title}}</h2>
+                        <p class="text-white-50 mb-3">{{subTitle}}</p>
+                        <form #login [formGroup]="form" (ngSubmit)="onSubmit('sectionBody')">
+                            <div class="form-outline form-white mb-2">
+                                <label class="form-label">Employee code</label>
+                                <div>
+                                    <i class="fa fa-user display-flex"></i>
+                                    <input type="text" id="employeeCode" placeholder="Enter Employee Code"
+                                        formControlName="employeeCode" class="form-control" style="width: 94%;"
+                                        name=employeeCode
+                                        [ngClass]="{ 'is-invalid': f['employeeCode'].invalid &&(submitted || f['employeeCode'].touched) }" />
+                                    <div *ngIf="f['employeeCode'].invalid &&(submitted || f['employeeCode'].touched)"
+                                        class="invalid-feedback">
+                                        <div *ngIf="f['employeeCode'].invalid &&(submitted || f['employeeCode'].touched)">
+                                            *EmployeeCode is required
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-outline form-white mb-2">
+                                <label class="form-label">Password</label>
+                                <div>
+                                    <i class="fa fa-lock display-flex"></i>
+                                </div>
+                                <input type="password" id="password" placeholder="Enter Password"
+                                    formControlName="password" class="form-control" style="width: 94%;" name=password
+                                    [ngClass]="{ 'is-invalid': f['password'].invalid &&(submitted || f['password'].touched) }" />
+                                    <i class="fa fa-eye-slash" id="togglePassword" (click)="showPassword($event)"></i>
+                                    <div *ngIf="f['password'].invalid &&(submitted || f['password'].touched)"
+                                    class="invalid-feedback">
+                                    <div *ngIf="f['password'].invalid &&(submitted || f['password'].touched)">*Password
+                                        is required
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <p class="small pb-lg-2"><a mat-raised-button class="text-white-50 frgt-link"
+                                    (click)="onClickForgotPassword(title)">{{linkName}}</a></p>
+
+                            <button class="btn btn-outline-light btn-lg px-5" type="submit">{{buttonName}}</button>
+                        </form>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,41 @@
+.body-scrl-out {
+    overflow: hidden !important;
+}
+.personal-details {
+    top: 5px;
+    padding: 17px 32px;
+    width: 56%;
+    position: relative;
+    left: 22%;
+    border: 1px solid;
+    box-shadow: 0px 0px 18px 4px;
+    border-radius: 18px;
+    background-color: #024d6b;
+    color: white;
+   
+}
+.contact-details-stepper {
+    overflow: auto;
+    padding: 0 24px 24px 24px;
+    max-height: 400px;
+}
+.btn {
+    width: 15%;
+    border: 1px solid;
+    box-shadow: 0px 0px 5px 1px;
+    border-radius: 9px;
+    background-color: #024d6b;
+    color: white;
+}
+.btn-prv:hover,.btn-next:hover{
+    background-color: #2d6783;
+    color: black;
+}
+
+.btn-next,.btn-success{
+    float: right;
+}
+.btn-success:hover{
+    background-color: green;
+    color: black;
+}

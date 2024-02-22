@@ -1,0 +1,22 @@
+.header {
+    /* background-color: #015994; */
+    background-color:#024d6b;
+    display: flex;
+}
+.header-right{
+    position: relative;
+    top: 40px;
+    font-size: 28px;
+    color: white;
+    display: flex;
+}
+.title {
+    text-align: center;
+    color: white;
+    top: 38%;
+    right: 5%;
+    position: relative;
+}
+.fa{
+    cursor: pointer;
+}

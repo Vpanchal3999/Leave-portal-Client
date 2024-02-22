@@ -1,0 +1,189 @@
+<div class="card">
+    <div class="header-container" id="header-container">
+        <app-header></app-header>
+    </div>
+    <div id="card-body">
+        <mat-tab-group (selectedTabChange)="tabClick($event)">
+            <mat-tab label="Employee Details">
+                <form [formGroup]="updateEmployeeForm">
+                    <mat-stepper [linear]="isLinear" #stepper>
+                        <mat-step label="Personal Details">
+                            <div class="personal-details">
+                                <h4 class="heading">Personal Details</h4>
+                                <div class="form-group">
+                                    <label class="name">First Name</label>
+                                    <input type="text" id="firstName" placeholder="Enter First Name" required
+                                        formControlName="firstName" class="form-control" name=firstName
+                                        [ngClass]="{ 'is-invalid':(submitted || f['firstName'].touched) && f['firstName'].invalid }" />
+                                    <div *ngIf="(submitted || f['firstName'].touched) && f['firstName'].invalid"
+                                        class="invalid-feedback">
+                                        <div *ngIf="f['firstName'].hasError('required')">*FirstName is required!!</div>
+                                        <div *ngIf="f['firstName'].hasError('pattern')">*FirstName doesn't contain
+                                            space!!</div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="name">Last Name</label>
+                                    <input type="text" id="lastName" placeholder="Enter Last Name" required
+                                        formControlName="lastName" class="form-control" name=lastName
+                                        [ngClass]="{ 'is-invalid': f['lastName'].invalid &&(submitted || f['lastName'].touched) }" />
+                                    <div *ngIf="f['lastName'].invalid &&(submitted || f['lastName'].touched)"
+                                        class="invalid-feedback">
+                                        <div *ngIf="f['lastName'].hasError('required')">*LastName is required</div>
+                                        <div *ngIf="f['lastName'].hasError('pattern')">*LastName doesn't contain space!!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="name">Age</label>
+                                    <input type="text" id="age" placeholder="Enter Employee Age" formControlName="age"
+                                        class="form-control" name=age
+                                        [ngClass]="{ 'is-invalid': f['age'].invalid &&(submitted || f['age'].touched) }" />
+                                    <div *ngIf="f['age'].invalid &&(submitted || f['age'].touched)"
+                                        class="invalid-feedback">
+                                        <div *ngIf="f['age'].hasError('required')">*Age is required!!</div>
+                                        <div *ngIf="f['age'].hasError('pattern')">*Age up to 3 numeric characters is
+                                            accepted!!</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button class="btn btn-prv" (click)="onPrev(stepper)"> <i class="fa fa-arrow-left"
+                                            style="margin-right: 9px" aria-hidden="true"></i>Prev</button>
+                                    <button class="btn btn-next" (click)="onNext(stepper)">Next<i
+                                            class="fa fa-arrow-right" style="margin-left: 9px"
+                                            aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                        </mat-step>
+                        <mat-step label="Department Details">
+                            <div class="personal-details">
+                                <h4 class="heading">Department Details</h4>
+                                <div class="form-group">
+                                    <label for="name">Employee code</label>
+                                    <input type="text" class="form-control" id="employeeCode"
+                                        formControlName="employeeCode" name=employeeCode [disabled]="true"
+                                        [ngClass]="{ 'is-invalid': f['employeeCode'].invalid &&(submitted || f['employeeCode'].touched) }" />
+                                    <div *ngIf="f['employeeCode'].invalid &&(submitted || f['employeeCode'].touched)"
+                                        class="invalid-feedback">
+                                        <div *ngIf="f['employeeCode'].hasError('required')">*Employee code is required!!
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">Department Name</label>
+                                    <input type="text" class="form-control" id="departmentName"
+                                        formControlName="departmentName" name=departmentName [disabled]=true
+                                        [ngClass]="{ 'is-invalid': f['departmentName'].invalid &&(submitted || f['departmentName'].touched) }" />
+                                    <div *ngIf="f['departmentName'].invalid &&(submitted || f['departmentName'].touched)"
+                                        class="invalid-feedback">
+                                        <div *ngIf="f['departmentName'].hasError('required')">*DepartmentName is
+                                            required!!</div>
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <label for="name">Designation Name</label>
+                                    <input type="text" class="form-control" id="designationName"
+                                        formControlName="designationName" name=designationName [disabled]=true
+                                        [ngClass]="{ 'is-invalid': f['designationName'].invalid &&(submitted || f['designationName'].touched) }" />
+                                    <div *ngIf="f['designationName'].invalid &&(submitted || f['designationName'].touched)"
+                                        class="invalid-feedback">
+                                        <div *ngIf="f['designationName'].hasError('required')">*Designation name is
+                                            required!!</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <button class="btn btn-prv" (click)="onPrev(stepper)"> <i class="fa fa-arrow-left"
+                                            style="margin-right: 9px" aria-hidden="true"></i>Prev</button>
+                                    <button class="btn btn-next" (click)="onNext(stepper)">Next<i
+                                            class="fa fa-arrow-right" style="margin-left: 9px"
+                                            aria-hidden="true"></i></button>
+                                </div>
+                            </div>
+                        </mat-step>
+                        <mat-step label="Contact Details">
+                            <!-- [stepControl]="thirdFormGroup" -->
+                            <div class="contact-details-stepper">
+                                <div class="personal-details">
+                                    <h4 class="heading">Contact Details</h4>
+                                    <div class="form-group">
+                                        <label class="name">Address Line 1</label>
+                                        <input type="text" id="addressLine1" placeholder="Enter Address Line 1"
+                                            formControlName="addressLine1" class="form-control" name=addressLine1
+                                            [ngClass]="{ 'is-invalid': f['addressLine1'].invalid &&(submitted || f['addressLine1'].touched) }" />
+                                        <div *ngIf="f['addressLine1'].invalid &&(submitted || f['addressLine1'].touched)"
+                                            class="invalid-feedback">
+                                            <div *ngIf="f['addressLine1'].hasError('required')">*Address Line 1 is
+                                                required!!</div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="name">Address Line 2</label>
+                                        <input type="text" id="addressLine2" placeholder="Enter Address Line 2"
+                                            formControlName="addressLine2" class="form-control" name=addressLine2
+                                            [ngClass]="{ 'is-invalid': f['addressLine2'].invalid &&(submitted || f['addressLine2'].touched) }" />
+                                        <div *ngIf="f['addressLine2'].invalid &&(submitted || f['addressLine2'].touched)"
+                                            class="invalid-feedback">
+                                            <div *ngIf="f['addressLine2'].hasError('required')">*Address Line 2 is
+                                                required!!</div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="name">Address Line 3</label>
+                                        <input type="text" id="addressLine3" placeholder="Enter Address Line 3"
+                                            formControlName="addressLine3" class="form-control" name=addressLine3
+                                            [ngClass]="{ 'is-invalid': f['addressLine3'].invalid &&(submitted || f['addressLine3'].touched) }" />
+                                        <div *ngIf="f['addressLine3'].invalid &&(submitted || f['addressLine3'].touched)"
+                                            class="invalid-feedback">
+                                            <div *ngIf="f['addressLine3'].hasError('required')">*Address Line 3 is
+                                                required</div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="name">Contact Number</label>
+                                        <input type="text" id="contactNumber" placeholder="Enter Contact number"
+                                            formControlName="contactNumber" class="form-control" name=contactNumber
+                                            [ngClass]="{ 'is-invalid':  f['contactNumber'].invalid &&(submitted || f['contactNumber'].touched) }" />
+                                        <div *ngIf=" f['contactNumber'].invalid &&(submitted || f['contactNumber'].touched)"
+                                            class="invalid-feedback">
+                                            <div *ngIf="f['contactNumber'].hasError('required')">*Contact number is
+                                                required!!</div>
+                                            <div *ngIf="f['contactNumber'].hasError('pattern')">*Contact number is
+                                                Invalid!! </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="name">Email Id </label>
+                                        <input type="text" id="email" placeholder="Enter Employee E-mail Id" required
+                                            formControlName="email" class="form-control" name=email
+                                            [ngClass]="{ 'is-invalid': f['email'].invalid &&(submitted || f['email'].touched) }" />
+                                        <div *ngIf="f['email'].invalid &&(submitted || f['email'].touched)"
+                                            class="invalid-feedback">
+                                            <div *ngIf="f['email'].hasError('required')">*E-mail is required!!</div>
+                                            <div *ngIf="f['email'].hasError('pattern')">*E-mail is Invalid!! </div>
+                                            <div *ngIf="f['email'].hasError('maxLength')">*E-mail length up to 20
+                                                character!! </div>
+                                        </div>
+                                    </div>
+                                    <div>
+                                        <button class="btn btn-prv" (click)="onPrev(stepper)"> <i
+                                                class="fa fa-arrow-left" style="margin-right: 9px"
+                                                aria-hidden="true"></i>Prev</button>
+                                        <button class="btn btn-success" (click)="onSubmit()">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </mat-step>
+                    </mat-stepper>
+                </form>
+            </mat-tab>
+            <mat-tab label="Apply Leave">
+                <app-apply-leaves *ngIf="showSecondTab"></app-apply-leaves>
+            </mat-tab>
+        </mat-tab-group>
+        
+    </div>
+    <div *ngIf="refreshIt">
+        <app-refresh-token data-target="#refresh-popup" (refreshed)="tokenRefresh($event)"></app-refresh-token>
+    </div>
+</div>

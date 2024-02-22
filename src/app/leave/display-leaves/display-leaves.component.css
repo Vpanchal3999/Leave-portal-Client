@@ -1,0 +1,11 @@
+.hgt{
+    height: 35% !important;
+}
+hr{
+    background-color: white;
+    width: 103.5%;
+}
+.hr-pad{
+    position: relative;
+    right: 3.5%;
+}

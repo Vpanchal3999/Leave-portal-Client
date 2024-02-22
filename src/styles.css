@@ -1,0 +1,126 @@
+/* You can add global styles to this file, and also import other style files */
+.body-scrl-out {
+  overflow: hidden !important;
+  font-family: initial;
+}
+.fa-close{
+  cursor: pointer;
+}
+.select-code {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+h2,
+h3,
+h4,
+.form-group {
+  font-family: initial;
+  font-size: 18px;
+  margin-bottom: 0.5rem;
+}
+
+.card-body {
+  margin-top: 40px;
+}
+
+.mat-mdc-select,
+.mat-mdc-option {
+  font-family: initial !important;
+  font-size: 14px !important;
+}
+.mat-mdc-select-disabled {
+  color: #303030 !important
+}
+.mdc-text-field--filled.mdc-text-field--disabled,
+.form-control:disabled,
+.form-control[readonly] {
+  background-color: #d4d5d7 !important;
+  opacity: 1;
+  color: #303030 !important
+}
+.form-control{
+  color: black !important;
+}
+
+.table-body {
+  overflow: auto;
+  max-height: 325px;
+  border: 1px solid #2d6783;
+}
+
+.tab-grp {
+  position: relative;
+  top: 20px;
+}
+
+#table-striped {
+  border-collapse: collapse;
+  width: 100%;
+  border: 2px solid #2d6783;
+}
+
+#refresh-popup {
+  display: block;
+}
+
+#table-striped td,
+#table-striped th {
+  border: 1px solid #fff;
+  padding: 8px;
+  font-family: initial;
+  font-size: 16px;
+}
+
+#table-striped tr:nth-child(even) {
+  /* background-color: #a0c4d5; */
+  background-color: #92abb7;
+
+}
+
+#table-striped tr:nth-child(odd) {
+  color: black;
+  background-color: #ccd5e1;
+}
+
+#table-striped tr:hover {
+  background-color: #024d6b;
+  color: white;
+}
+
+#table-striped th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #2d6783;
+  color: white;
+}
+
+.mat-mdc-tab.mdc-tab--active .mdc-tab__text-label {
+  color: #024d6b !important;
+  font-size: 16px !important;
+}
+
+.show-pr-details {
+  position: fixed;
+  top: 34%;
+  left: 26%;
+  border: 1px solid;
+  border-radius: 26px;
+  background-color: #024d6b;
+  color: white;
+  height: 45%;
+  width: 45%;
+  padding: 10px 0 0 20px
+}
+#show-pr-details::before{
+  display: none;
+}
+#show-pr-details::after{
+  display: block;
+}
+
+
+.invalid-feedback {
+  color: #ff6e6e !important;
+}
