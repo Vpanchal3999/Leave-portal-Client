@@ -4,7 +4,7 @@ FROM node:18.17.1 as build
 WORKDIR /app/processes-client
 
 # Copy the Angular app package.json and install dependencies
-COPY ./leave-management-font-end ./
+COPY ./ ./
 RUN npm install --force --fetch-timeout=120000
 
 # Copy the Angular app source code and build it
