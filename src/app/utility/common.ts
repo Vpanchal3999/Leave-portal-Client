@@ -1,5 +1,5 @@
 export class Common {
-    public baseUrl = "http://localhost:8080/api/v1";
+    public baseUrl = "http://192.168.2.199:8080/api/v1";
     public authUrl = "/auth";
     public adminUrl = "/admin";
     public login = "/login";
