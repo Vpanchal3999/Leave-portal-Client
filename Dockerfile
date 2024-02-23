@@ -20,5 +20,5 @@ COPY --from=build /app/processes-client/dist/leave-portal-v2 /usr/share/nginx/ht
 EXPOSE 80
 
 COPY ./startup.sh /startup.sh
-# RUN chmod +x /startup.sh
-# CMD ["./startup.sh"]
+RUN chmod +x /startup.sh
+CMD ["./startup.sh"]
