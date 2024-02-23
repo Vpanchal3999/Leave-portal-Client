@@ -17,8 +17,10 @@ FROM nginx:alpine
 # Copy the build output to the Nginx serve directory
 COPY --from=build /app/processes-client/dist/leave-portal-v2 /usr/share/nginx/html
 
+WORKDIR ./
+
 EXPOSE 80
 
 COPY ./startup.sh /startup.sh
 RUN chmod +x /startup.sh
-CMD ["./startup.sh"]
+# CMD ["./startup.sh"]
